@@ -10,6 +10,6 @@ handler do |job, time|
 end
 
 # test it
-# every(15.seconds, 'holla') { CodeFellowsBot::S3Uploader.holla }
+every(15.seconds, 'holla') { CodeFellowsBot::S3Uploader.new.holla }
 
-every(5.minutes, 'uploader') { CodeFellowsBot::S3Uploader.upload_log }
+every(5.minutes, 'uploader') { CodeFellowsBot::S3Uploader.new.upload_log }
