@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
 gem 'cinch'
-gem 'aws-s3'
+gem 's3'
+gem 'clockwork'
 
 group :development, :test do
   gem 'pry'

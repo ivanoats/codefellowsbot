@@ -1,16 +1,19 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    aws-s3 (0.6.3)
-      builder
-      mime-types
-      xml-simple
-    builder (3.2.2)
+    activesupport (3.2.15)
+      i18n (~> 0.6, >= 0.6.4)
+      multi_json (~> 1.0)
     cinch (2.0.10)
+    clockwork (0.7.0)
+      activesupport
+      tzinfo (~> 0.3.35)
     coderay (1.0.9)
+    i18n (0.6.5)
     method_source (0.8.2)
-    mime-types (2.0)
     minitest (5.0.8)
+    multi_json (1.8.2)
+    proxies (0.2.1)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -18,16 +21,19 @@ GEM
     pry-doc (0.4.6)
       pry (>= 0.9)
       yard (>= 0.8)
+    s3 (0.3.17)
+      proxies (~> 0.2.0)
     slop (3.4.6)
-    xml-simple (1.1.2)
+    tzinfo (0.3.38)
     yard (0.8.7.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-s3
   cinch
+  clockwork
   minitest
   pry
   pry-doc
+  s3
