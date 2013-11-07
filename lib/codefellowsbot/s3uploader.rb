@@ -1,27 +1,28 @@
+require_relative "log_it"
+require 's3'
+
 module CodeFellowsBot
   class S3Uploader
-    require 's3'
-    require_relative "log_it"
     include LogIt
 
     # for testing the clockwork "cron"
-    def self.holla
+    def holla
       puts "Holla!"
     end
 
-    def self.upload_log
+    def upload_log
       upload_file(log_file_name)
     end
 
   private
-    def self.establish_connection
+    def establish_connection
       @s3service = S3::Service.new(
         :access_key_id => ENV['CF_AWS_KEY'],
         :secret_access_key => ENV['CF_AWS_SECRET']
       )
     end
 
-    def self.upload_file(filename)
+    def upload_file(filename)
       establish_connection
       cf_bucket = @s3service.buckets.find('assets.codefellows.org')
       new_logfile = cf_bucket.objects.build(
