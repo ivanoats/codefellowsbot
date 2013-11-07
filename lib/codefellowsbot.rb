@@ -1,8 +1,9 @@
+require 'bundler/setup'
 require 'cinch'
-require 's3uploader'
-require 'greeter'
-require 'helper'
-require 'logger'
+require 'codefellowsbot/s3uploader'
+require 'codefellowsbot/greeter'
+require 'codefellowsbot/helper'
+require 'codefellowsbot/logger'
 
 bot = Cinch::Bot.new do
   configure do |c|
@@ -14,10 +15,9 @@ bot = Cinch::Bot.new do
     c.plugins.plugins  = [
       CodeFellowsBot::Logger,
       CodeFellowsBot::Greeter,
-      CodeFellowsBotHelper,
+      CodeFellowsBot::Helper,
     ]
   end
-
 end
 
 bot.loggers << Cinch::Logger::FormattedLogger.new(File.open("./codefellows_chat_log_from_cinch.txt","a"))

@@ -7,8 +7,20 @@ GEM
       xml-simple
     builder (3.2.2)
     cinch (2.0.10)
+    coderay (1.0.9)
+    method_source (0.8.2)
     mime-types (2.0)
+    minitest (5.0.8)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-doc (0.4.6)
+      pry (>= 0.9)
+      yard (>= 0.8)
+    slop (3.4.6)
     xml-simple (1.1.2)
+    yard (0.8.7.2)
 
 PLATFORMS
   ruby
@@ -16,3 +28,6 @@ PLATFORMS
 DEPENDENCIES
   aws-s3
   cinch
+  minitest
+  pry
+  pry-doc
