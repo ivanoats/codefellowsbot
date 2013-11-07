@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-require 'minitest/colorize'
 require 'minitest/spec'
 
 # Always use local CodeFellowsBot first
