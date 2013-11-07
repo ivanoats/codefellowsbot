@@ -1,3 +1,5 @@
+require_relative 'log_it'
+
 module CodeFellowsBot
   class Greeter
     include Cinch::Plugin
