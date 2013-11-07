@@ -1,6 +1,8 @@
 module CodeFellowsBot
   class S3Uploader
     require 's3'
+    require_relative "log_it"
+    include LogIt
 
     # for testing the clockwork "cron"
     def self.holla
@@ -8,7 +10,7 @@ module CodeFellowsBot
     end
 
     def self.upload_log
-      upload_file('./codefellows_chat_log.txt')
+      upload_file(log_file_name)
     end
 
   private
@@ -23,9 +25,10 @@ module CodeFellowsBot
       establish_connection
       cf_bucket = @s3service.buckets.find('assets.codefellows.org')
       new_logfile = cf_bucket.objects.build(
-        "chat-log-#{Time.now.strftime("%Y%m%d")}.txt"
+        "chat-log-#{Date.today}.html"
       )
       new_logfile.content = File.read(filename)
+      new_logfile.content_type = "text/html"
       new_logfile.save
       puts "stored S3 object: #{filename}"
     end
