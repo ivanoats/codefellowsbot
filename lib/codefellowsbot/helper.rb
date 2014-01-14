@@ -18,6 +18,10 @@ module CodeFellowsBot
         "See if any of these steps can help you: http://hijk.it/3d3m0M0f2z0f",
         "Maybe post a longer description to stack overflow",
         "Drop and give me 20!",
+        "I need somebody",
+        "Not just anybody",
+        "You know I need someone",
+        "Check this out: http://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html"
       ].sample
       m.reply message
       log_it "bot", message
