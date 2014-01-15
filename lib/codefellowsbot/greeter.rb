@@ -5,7 +5,7 @@ module CodeFellowsBot
     include Cinch::Plugin
     include LogIt
 
-    match(/^hello/, use_prefix: false)
+    match(/^hello/i, use_prefix: false)
 
     def execute(m)
       message = "Hello, #{m.user.nick}"
