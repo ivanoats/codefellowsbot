@@ -2,6 +2,7 @@ require 'bundler/setup'
 require 'clockwork'
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'codefellowsbot/s3uploader'
+require 'codefellowsbot/topic_setter'
 
 include Clockwork
 
@@ -10,6 +11,8 @@ handler do |job, time|
 end
 
 # test it
-every(15.seconds, 'holla') { CodeFellowsBot::S3Uploader.new.holla }
+#every(15.seconds, 'holla') { CodeFellowsBot::S3Uploader.new.holla }
 
 every(5.minutes, 'uploader') { CodeFellowsBot::S3Uploader.new.upload_log }
+
+every(1.hour, 'topic') { CodeFellowsBot::TopicSetter.new.set_topic }

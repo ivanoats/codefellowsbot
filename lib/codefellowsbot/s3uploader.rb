@@ -11,7 +11,7 @@ module CodeFellowsBot
     end
 
     def upload_log
-      upload_file(log_file_name)
+      upload_file(local_log_file_name)
     end
 
   private
@@ -25,9 +25,7 @@ module CodeFellowsBot
     def upload_file(filename)
       establish_connection
       cf_bucket = @s3service.buckets.find('assets.codefellows.org')
-      new_logfile = cf_bucket.objects.build(
-        "chat-log-#{Date.today}.html"
-      )
+      new_logfile = cf_bucket.objects.build( remote_chat_log_file_name )
       new_logfile.content = File.read(filename)
       new_logfile.content_type = "text/html"
       new_logfile.save

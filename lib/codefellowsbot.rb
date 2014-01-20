@@ -3,6 +3,7 @@ require 'cinch'
 require 'codefellowsbot/s3uploader'
 require 'codefellowsbot/greeter'
 require 'codefellowsbot/helper'
+require 'codefellowsbot/topic_setter'
 require 'codefellowsbot/logger'
 
 module CodeFellowsBot
@@ -21,6 +22,7 @@ module CodeFellowsBot
             CodeFellowsBot::Logger,
             CodeFellowsBot::Greeter,
             CodeFellowsBot::Helper,
+            CodeFellowsBot::TopicSetter
           ]
         end
       end
