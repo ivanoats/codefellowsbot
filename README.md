@@ -4,7 +4,7 @@ The bot logs the channel, and responds to 'hello' and 'help'.
 
 ## Running the bot
 
-At present, you will need to terminal windows to get the bot running. One for running the bot:
+At present, you will need two terminal windows to get the bot running. One for running the bot:
 
     export CF_AWS_SECRET=your S3 access secret
     export CF_AWS_KEY=your S3 access key
