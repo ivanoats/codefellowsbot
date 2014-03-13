@@ -10,7 +10,8 @@ module CodeFellowsBot
     def execute(m)
       message = [
         "Have you written a test for that?",
-        "Have you tried turning the computer on and off again?",
+        "Have you tried turning the computer off and on again?",
+        "Try this: 'sudo !!'",
         "Hello. I am a duck. How would you describe the issue?",
         "Did a recent change cause this behavior?",
         "You did restart the server, right?",
