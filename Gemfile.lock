@@ -24,7 +24,7 @@ GEM
     s3 (0.3.17)
       proxies (~> 0.2.0)
     slop (3.4.6)
-    tzinfo (0.3.38)
+    tzinfo (0.3.61)
     yard (0.8.7.2)
 
 PLATFORMS
