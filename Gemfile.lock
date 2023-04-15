@@ -25,7 +25,7 @@ GEM
       proxies (~> 0.2.0)
     slop (3.4.6)
     tzinfo (0.3.38)
-    yard (0.8.7.2)
+    yard (0.9.34)
 
 PLATFORMS
   ruby
